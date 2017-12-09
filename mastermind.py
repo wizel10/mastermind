@@ -1,6 +1,9 @@
 #!/usr/bin/python3.6 -tt
+# -*- coding: utf-8 -*-
 
-import random
+# import the pygame libraries into our program so we have access to them
+import pygame, sys, random
+from pygame.locals import *
 
 print (" --- MASTERMIND --- \n")
 print ("Guess the secret color code in as few tries as possible.\n")
@@ -24,11 +27,11 @@ def main():
 	# checking if player's input is correct
 	if len(player_guess) != len(color_code):
 		print ("\nThe secret code has exactly four colors. I know, you can count to four. Try again!")
-		continue
+
 	for i in range(4):
 		if player_guess[i] not in colors:
 			print ("\nLook up what colors you can use in this game. You are not a daltonist, are you?")
-			continue
+			
 
 	# comparison between player's input and secret code
 	if correct_color != "XXXX":
@@ -62,6 +65,5 @@ def main():
 			print ("So, let's play again... Guess the secret code: ")
 
 
-
-if __name__=='__main__':
+if __name__ == '__main__':
     main()
