@@ -1,4 +1,4 @@
-# --- MASTERMIND --- #
+#!/usr/bin/python3.6 -tt
 
 import random
 
@@ -14,8 +14,8 @@ game = True
 color_code = random.sample(colors,4)
 print (color_code)
 
-# player guesses the number
-while game:
+#Main function
+def main():
 	correct_color = ""
 	guessed_color = ""
 	player_guess = input().upper()
@@ -61,4 +61,7 @@ while game:
 			game = True
 			print ("So, let's play again... Guess the secret code: ")
 
-# --- end --- #	
+
+
+if __name__=='__main__':
+    main()
